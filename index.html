@@ -24,7 +24,6 @@
         padding: 10px;
         margin: auto;
         width: 70%;
-        border: 1px solid black;
         justify-content: space-between;
         align-items: center;
         height: 720px;
@@ -33,23 +32,27 @@
       nav .column {
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
-        width: 30%;
+        width: 50%;
         align-items: center;
       }
 
       li {
         list-style: none;
-        margin: 5px;
-        background-color: red;
+        margin: 20px;
         padding: 10px;
-        border-radius: 12px;
       }
 
       nav a {
         text-decoration: none;
-        color: white;
-        font-size: 26px;
+        font-size: 42px;
+        color: black;
+        padding: 10px;
+        border-radius: 32px;
+      }
+
+      nav a:hover {
+        background-color: white;
+        transition: 800ms;
       }
 
       .container {
@@ -66,103 +69,104 @@
       p {
         font-size: 32px;
       }
+
+      h4 {
+        font-size: 46px;
+      }
     </style>
-    <script></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var anchorTags = document.querySelectorAll('a[href^="#"]');
+
+        anchorTags.forEach(function (anchor) {
+          anchor.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var targetId = this.getAttribute('href').substr(1);
+
+            var targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     <nav>
       <div class="column">
-        <li><a href="#1">1123123123</a></li>
-        <li><a href="#2">2123123123</a></li>
-        <li><a href="#3">3123123123</a></li>
-        <li><a href="#4">41231231231</a></li>
+        <li><a href="#1">Атмосфера</a></li>
+        <li><a href="#2">Tечности</a></li>
+        <li><a href="#3">Хелий</a></li>
       </div>
       <div class="column">
-        <li><a href="#5">5123123123123</a></li>
-        <li><a href="#6">612312312</a></li>
-        <li><a href="#7">7123123</a></li>
-        <li><a href="#8">812312312312</a></li>
+        <li><a href="#4">Селското стопанство</a></li>
+        <li><a href="#5">Фобия</a></li>
+        <li><a href="#6">Умора</a></li>
       </div>
     </nav>
     <div class="container">
       <div id="1">
-        <h4></h4>
+        <h4>Атмосфера</h4>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          Атмосфера е общото наименование на слоя газове, обгръщащ небесно
+          тяло с достатъчно голяма маса, като например планети. Една атмосфера е
+          по-вероятно да се задържи, ако гравитацията на небесното тяло е
+          достатъчно висока, a температурата на атмосферата е достатъчно ниска.
+          Дебелината ѝ варира и тя се върти заедно с небесното тяло като едно
+          цяло. Някои планети се състоят почти изцяло от газове и така имат
+          извънредно дълбока атмосфера.
         </p>
       </div>
       <div id="2">
-        <h4></h4>
+        <h4>Tечности</h4>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          Течността е едно от трите класически агрегатни състояния на
+          веществото. При обикновени условия течностите имат собствен обем, но
+          нямат определена форма, а приемат формата на съда, в който се намират.
+          Те са флуиди.
         </p>
       </div>
       <div id="3">
-        <h4></h4>
+        <h4>Хелий</h4>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          Хелият е химичен елемент с атомен номер 2 и атомна маса 4,002602.
+          Означаван със символа He. Представлява безцветен нетоксичен газ без
+          вкус и миризма и заема първото място в групата на инертните
+          газове в периодичната система. Неговите температура на
+          кипене и топене са най-ниските сред всички химични елементи, като
+          съществува само в газообразна форма, освен при определени екстремни
+          условия.
         </p>
       </div>
       <div id="4">
-        <h4></h4>
+        <h4>Селското стопанство</h4>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          Селското стопанство е отрасъл на икономиката, включващ отглеждането
+          на домашни животни и растения, от които се произвеждат храна, влакна,
+          биогорива, лекарства и други продукти.[1] Неговото възникване изиграва
+          ключова роля за появата на човешката цивилизация, създавайки излишъци
+          от хранителни ресурси и давайки възможност за увеличаване на гъстотата
+          на населението и усложняване на обществената организация.
         </p>
       </div>
       <div id="5">
-        <h4></h4>
+        <h4>Фобия</h4>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          Фобия е патологичен, натраплив, ирационален и силен страх към
+          специфичен обект, определена дейност или специално обстоятелство;
+          страх, който се разпознава от самия индивид като ексцесивен и
+          безпричинен, но когато този страх се превърне в натрапливо състояние и
+          стане значим източник на разстройство, повлиявайки социалното
+          функциониране, се приема за психично нарушение.
         </p>
       </div>
       <div id="6">
-        <h4></h4>
+        <h4>Умора</h4>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
-        </p>
-      </div>
-      <div id="7">
-        <h4></h4>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
-        </p>
-      </div>
-      <div id="8">
-        <h4></h4>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          Умората е субективно усещане за отпадналост и изтощение[1], което се
+          появява постепенно. За разлика от слабостта, умората може да бъде
+          облекчена с периоди на почивка. Може да има физически или умствени
+          причини.
         </p>
       </div>
     </div>
