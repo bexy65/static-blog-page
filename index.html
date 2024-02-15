@@ -73,10 +73,36 @@
       h4 {
         font-size: 46px;
       }
+
+      button {
+        display: none;
+        padding: 10px;
+        font-size: 44px;
+        position: fixed;
+        margin-left: 1400px;
+        margin-top: 620px;
+        border-radius: 32px;
+        border: none;
+        width: 40px;
+        transition: 1200ms;
+      }
     </style>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var anchorTags = document.querySelectorAll('a[href^="#"]');
+        var button = document.getElementById('scrollButton');
+
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 740) {
+            button.style.display = 'block';
+          } else {
+            button.style.display = 'none';
+          }
+        });
+
+        button.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         anchorTags.forEach(function (anchor) {
           anchor.addEventListener('click', function (event) {
@@ -92,6 +118,7 @@
     </script>
   </head>
   <body>
+    <button class="up" id="scrollButton">↑</button>
     <nav>
       <div class="column">
         <li><a href="#1">Атмосфера</a></li>
